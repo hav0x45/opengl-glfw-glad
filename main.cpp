@@ -1,4 +1,6 @@
 #include <iostream>
+#include <glad/glad.c>
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
 int main() {
