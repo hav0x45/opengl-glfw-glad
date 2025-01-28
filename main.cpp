@@ -10,15 +10,24 @@ int main() {
     GLFWwindow* window = glfwCreateWindow(1280, 720, "Title", 0, 0);
 
     if (!window) {
-        return 1;
+        glfwTerminate();
+        return -1;
     }
 
     if (!glfwInit) {
         std::cout << "Couldn't initialize GLFW." << std::endl;
-        return 1;
+        glfwTerminate();
+        return -1;
     }
 
-    
+    bool running = true;
+
+    while (running) {
+        if (GetAsyncKeyState(VK_ESCAPE)) {
+            glfwTerminate();
+            running = false;
+        }
+    }
 
     return 0;
 }
