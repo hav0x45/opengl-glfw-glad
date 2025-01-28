@@ -13,5 +13,12 @@ int main() {
         return 1;
     }
 
+    if (!glfwInit) {
+        std::cout << "Couldn't initialize GLFW." << std::endl;
+        return 1;
+    }
+
+    
+
     return 0;
 }
